@@ -1,7 +1,7 @@
 name: CI + build only
 
 on:
-  pull request:
+  pull_request:
   branches:
     - main
 
