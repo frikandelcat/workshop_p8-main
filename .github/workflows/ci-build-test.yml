@@ -30,7 +30,7 @@ jobs:
       - name: Run tests
         run: |
           mkdir -p test-results
-          composer test-log-junit test-results/junit.xml
+          composer test test-results/junit.xml
 
       # 5. Upload testresultaten als artifact
       - name: Upload test results
