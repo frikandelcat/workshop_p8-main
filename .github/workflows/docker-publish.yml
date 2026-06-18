@@ -29,7 +29,7 @@ jobs:
           docker build -t ${{ secrets.DOCKER_USERNAME }}/tasktracker-api:latest .
 
       - name: Push version tag
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/tasktracker-api-apinimage:${{ steps.tag.outputs.VERSION }}
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/tasktracker-api:${{ steps.tag.outputs.VERSION }}
 
       - name: Push latest tag
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/mijnitasktracker-apimage:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/tasktracker-api:latest
