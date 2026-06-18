@@ -1,9 +1,9 @@
-name: CI + build only (fout)
+name: CI + build only
 
 on:
   pull_request:
     branches:
-      - feature/break-test
+      - bamisoep
 
 jobs:
   build-test:
