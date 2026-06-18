@@ -18,7 +18,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 81
+          php-version: 82
           tools: composer
           coverage: none
 
