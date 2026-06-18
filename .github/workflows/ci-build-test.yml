@@ -3,7 +3,7 @@ name: CI + build only
 on:
   pull_request:
     branches:
-      - main
+      - bamisoep
 
 jobs:
   build-test:
@@ -18,7 +18,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.2'
+          php-version: 82
           tools: composer
           coverage: none
 
@@ -30,7 +30,7 @@ jobs:
       - name: Run tests
         run: |
           mkdir -p test-results
-          composer test-log-junit test-results/junit.xml
+          composer test -- --log-junit test-results/junit.xml
 
       # 5. Upload testresultaten als artifact
       - name: Upload test results
@@ -40,5 +40,3 @@ jobs:
         with:
           name: test-results
           path: test-results
-
-          # a
