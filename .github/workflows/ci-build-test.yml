@@ -1,9 +1,9 @@
-name: CI + build only
+name: CI + build only (fout)
 
 on:
   pull_request:
     branches:
-      - master
+      - feature/break-test
 
 jobs:
   build-test:
@@ -18,7 +18,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.2
+          php-version: 82
           tools: composer
           coverage: none
 
