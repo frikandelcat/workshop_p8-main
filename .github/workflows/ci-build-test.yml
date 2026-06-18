@@ -1,4 +1,4 @@
-name: CI + build only (fout)
+name: CI + build only
 
 on:
   pull_request:
