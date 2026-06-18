@@ -3,7 +3,7 @@ name: CI + build only
 on:
   pull_request:
     branches:
-      - feature/break-test
+      - master
 
 jobs:
   build-test:
